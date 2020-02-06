@@ -66,7 +66,7 @@ self.addEventListener('activate', (evt) => {
     evt.waitUntil(
         caches.keys().then((keyList) => {
             return Promise.all(keyList.map((key) => {
-                if (key !== CACHE_NAME) {
+                if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
                     console.log('[ServiceWorker] Removing old cache', key);
                     return caches.delete(key);
                 }
