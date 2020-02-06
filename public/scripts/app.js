@@ -127,9 +127,9 @@ function renderForecast(card, data) {
         tile.querySelector('.date').textContent = forecastFor;
         tile.querySelector('.icon').className = `icon ${forecast.icon}`;
         tile.querySelector('.temp-high .value')
-            .textContent = Math.round(forecast.temperatureHigh);
+            .textContent = Math.round((forecast.temperatureHigh - 32) / 1.8);
         tile.querySelector('.temp-low .value')
-            .textContent = Math.round(forecast.temperatureLow);
+            .textContent = Math.round((forecast.temperatureLow - 32) / 1.8);
     });
 
     // If the loading spinner is still visible, remove it.
