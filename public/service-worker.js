@@ -23,6 +23,7 @@ const DATA_CACHE_NAME = 'data-cache-v1';
 
 // CODELAB: Add list of files to cache here.
 const FILES_TO_CACHE = [
+    // '/offline.html',  our app now has all the necessary resources it needs to work offline
     '/',
     '/index.html',
     '/scripts/app.js',
