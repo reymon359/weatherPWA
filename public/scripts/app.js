@@ -98,7 +98,7 @@ function renderForecast(card, data) {
     card.querySelector('.current .icon')
         .className = `icon ${data.currently.icon}`;
     card.querySelector('.current .temperature .value')
-        .textContent = Math.round(data.currently.temperature);
+        .textContent = Math.round((data.currently.temperature - 32) / 1.8);
     card.querySelector('.current .humidity .value')
         .textContent = Math.round(data.currently.humidity * 100);
     card.querySelector('.current .wind .value')
