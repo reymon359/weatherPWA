@@ -22,7 +22,7 @@ const installButton = document.getElementById('butInstall');
 installButton.addEventListener('click', installPWA);
 
 // CODELAB: Add event listener for beforeinstallprompt event
-
+window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
 
 /**
  * Event handler for beforeinstallprompt event.
@@ -31,8 +31,9 @@ installButton.addEventListener('click', installPWA);
  * @param {Event} evt
  */
 function saveBeforeInstallPromptEvent(evt) {
-  // CODELAB: Add code to save event & show the install button.
-
+    // CODELAB: Add code to save event & show the install button.
+    deferredInstallPrompt = evt;
+    installButton.removeAttribute('hidden');
 }
 
 
@@ -42,9 +43,9 @@ function saveBeforeInstallPromptEvent(evt) {
  * @param {Event} evt
  */
 function installPWA(evt) {
-  // CODELAB: Add code show install prompt & hide the install button.
+    // CODELAB: Add code show install prompt & hide the install button.
 
-  // CODELAB: Log user response to prompt.
+    // CODELAB: Log user response to prompt.
 
 }
 
@@ -57,6 +58,6 @@ function installPWA(evt) {
  * @param {Event} evt
  */
 function logAppInstalled(evt) {
-  // CODELAB: Add code to log the event
+    // CODELAB: Add code to log the event
 
 }
