@@ -61,6 +61,7 @@ function installPWA(evt) {
 }
 
 // CODELAB: Add event listener for appinstalled event
+window.addEventListener('appinstalled', logAppInstalled);
 
 /**
  * Event handler for appinstalled event.
@@ -70,5 +71,5 @@ function installPWA(evt) {
  */
 function logAppInstalled(evt) {
     // CODELAB: Add code to log the event
-
+    console.log('Weather App was installed.', evt);
 }
