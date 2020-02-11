@@ -183,7 +183,7 @@ function startServer() {
     app.get('/forecast/', getForecast);
     app.get('/forecast', getForecast);
 
-    const publicPath = path.resolve(__dirname, '/public');
+    const publicPath = path.resolve(__dirname, './public');
     const port = process.env.PORT || 3000;
 
     app.use(express.static(publicPath));
