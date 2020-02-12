@@ -1,6 +1,6 @@
 # Weather PWA
 
-Weather app made from the Codelab of [Your First Progressive Web App][codelab] codelab.
+Weather app made from the Codelab of [Your First Progressive Web App][codelab].
 
 ![](https://raw.githubusercontent.com/reymon359/weatherPWA/master/image.png)
 
